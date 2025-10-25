@@ -1,0 +1,25 @@
+2025-10-23 14:01:33 [INFO] com.parabank.qa.listeners.ExtentReportListener: ✅ -----Test Started-----: runScenario
+2025-10-23 14:01:33 [INFO] com.parabank.qa.hooks.Hooks: 🔧 [Before] Starting driver setup for scenario
+2025-10-23 14:01:35 [INFO] com.parabank.qa.hooks.Hooks: 🌐 Navigating to URL: https://parabank.parasoft.com/
+2025-10-23 14:01:37 [INFO] com.parabank.qa.hooks.Hooks: 📝 ExtentTest started for scenario: Transfer funds between user's accounts
+2025-10-23 14:01:39 [INFO] com.parabank.qa.helpers.AssertionHelper: ✅ Assert TRUE: User should be logged in and land on Accounts Overview page
+2025-10-23 14:01:40 [INFO] com.parabank.qa.stepdefinitions.TransferFundsSteps: fromAccount 14898
+2025-10-23 14:01:40 [INFO] com.parabank.qa.stepdefinitions.TransferFundsSteps: toAccount 22668
+2025-10-23 14:01:43 [INFO] com.parabank.qa.stepdefinitions.TransferFundsSteps: before click transfer
+2025-10-23 14:01:45 [INFO] com.parabank.qa.stepdefinitions.TransferFundsSteps: transferred amount from  14898to account 22668
+2025-10-23 14:01:45 [INFO] com.parabank.qa.stepdefinitions.TransferFundsSteps: after click transfer
+2025-10-23 14:01:45 [INFO] com.parabank.qa.stepdefinitions.TransferFundsSteps: In method 'Then a transfer confirmation message should be displayed'
+2025-10-23 14:01:45 [INFO] com.parabank.qa.stepdefinitions.TransferFundsSteps: Confirmation message received: 'Transfer Funds'
+2025-10-23 14:01:45 [INFO] com.parabank.qa.helpers.AssertionHelper: ✅ Assert TRUE: Confirmation message should contain 'Transfer Complete!'
+2025-10-23 14:01:46 [INFO] com.parabank.qa.hooks.Hooks: 🧹 [After] Cleaning up driver after scenario
+2025-10-23 14:01:46 [INFO] com.parabank.qa.helpers.ScreenshotUtil: 📸 Screenshot captured: logs/run_20251023_140132/screenshots/Transfer funds between user's accounts_20251023_140146.png
+2025-10-23 14:01:46 [ERROR] com.parabank.qa.listeners.ExtentReportListener: ❌---- Test Failed----: runScenario
+java.lang.AssertionError: Confirmation message should contain 'Transfer Complete!' expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.parabank.qa.helpers.AssertionHelper.verifyTrue(AssertionHelper.java:18)
+	at com.parabank.qa.stepdefinitions.TransferFundsSteps.transfer_confirmation_message_should_be_displayed(TransferFundsSteps.java:100)
+	at ✽.a transfer confirmation message should be displayed(file:///C:/Users/thati/eclipse-workspace/JavaProgramming/Parabank-automation-project/src/test/resources/features/transfer-funds.feature:10)
+2025-10-23 14:01:46 [ERROR] com.parabank.qa.helpers.ScreenshotUtil: WebDriver instance is null. Cannot take screenshot.
+2025-10-23 14:01:47 [INFO] com.parabank.qa.listeners.ExtentReportListener: 📄 Extent Report Flushed and Finalized.
