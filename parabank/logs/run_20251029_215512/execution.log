@@ -1,0 +1,29 @@
+2025-10-29 21:55:13 [INFO] com.parabank.qa.listeners.ExtentReportListener: ✅ -----Test Started-----: runScenario
+2025-10-29 21:55:13 [INFO] com.parabank.qa.hooks.Hooks: 🔧 [Before] Starting driver setup for scenario
+2025-10-29 21:55:15 [INFO] com.parabank.qa.hooks.Hooks: 🌐 Navigating to URL: https://parabank.parasoft.com/
+2025-10-29 21:55:16 [INFO] com.parabank.qa.hooks.Hooks: 📝 ExtentTest started for scenario: Valid login with correct credentials
+2025-10-29 21:55:16 [INFO] com.parabank.qa.helpers.AssertionHelper: ✅ Assert TRUE: User is on login page
+2025-10-29 21:55:38 [INFO] com.parabank.qa.hooks.Hooks: 🧹 [After] Cleaning up driver after scenario
+2025-10-29 21:55:38 [INFO] com.parabank.qa.helpers.ScreenshotUtil: 📸 Screenshot captured: logs/run_20251029_215512/screenshots/Valid login with correct credentials_20251029_215538.png
+2025-10-29 21:55:38 [ERROR] com.parabank.qa.listeners.ExtentReportListener: ❌---- Test Failed----: runScenario
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be "ParaBank | Accounts Overview". Current title: "ParaBank | Error" (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\thati\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62342}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62342/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c2c0fecdbf436a3eff4b5c011e64e67d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.parabank.qa.helpers.WaitHelper.waitForTitleToBe(WaitHelper.java:40)
+	at com.parabank.qa.stepdefinitions.LoginSteps.user_should_land_on(LoginSteps.java:50)
+	at ✽.user should land on "Accounts Overview"(file:///C:/Users/thati/git/parabank_local_repo/parabank/src/test/resources/features/login.feature:9)
+2025-10-29 21:55:38 [ERROR] com.parabank.qa.helpers.ScreenshotUtil: WebDriver instance is null. Cannot take screenshot.
+2025-10-29 21:55:38 [INFO] com.parabank.qa.listeners.ExtentReportListener: ✅ -----Test Started-----: runScenario
+2025-10-29 21:55:38 [INFO] com.parabank.qa.hooks.Hooks: 🔧 [Before] Starting driver setup for scenario
+2025-10-29 21:55:40 [INFO] com.parabank.qa.hooks.Hooks: 🌐 Navigating to URL: https://parabank.parasoft.com/
+2025-10-29 21:55:41 [INFO] com.parabank.qa.hooks.Hooks: 📝 ExtentTest started for scenario: Valid login with correct credentials
+2025-10-29 21:55:41 [INFO] com.parabank.qa.helpers.AssertionHelper: ✅ Assert TRUE: User is on login page
+2025-10-29 21:55:42 [INFO] com.parabank.qa.helpers.AssertionHelper: ✅ Assert TRUE: User landed on expected page: Accounts Overview
+2025-10-29 21:55:42 [INFO] com.parabank.qa.hooks.Hooks: 🧹 [After] Cleaning up driver after scenario
+2025-10-29 21:55:43 [INFO] com.parabank.qa.listeners.ExtentReportListener: ✅ ----Test Passed-----: runScenario
+2025-10-29 21:55:43 [INFO] com.parabank.qa.listeners.ExtentReportListener: 📄 Extent Report Flushed and Finalized.

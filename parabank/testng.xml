@@ -4,9 +4,14 @@
         <listener class-name="com.parabank.qa.listeners.ExtentReportListener" />
     </listeners>
 
-    <test name="Smoke Tests">
+  <!-- ✅ Define the execution order -->
+    <test name="Register and Login Tests">
         <classes>
-            <class name="com.parabank.qa.tests.LoginTest"/> <!-- Add your actual test classes here -->
+            <!-- Runs first -->
+            <class name="com.parabank.qa.runners.RegisterRunner"/>
+            
+            <!-- Runs second -->
+            <class name="com.parabank.qa.runners.LoginRunner"/>
         </classes>
     </test>
 </suite>

@@ -8,18 +8,80 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">11,439</td><td></td><td></td></tr>
+<tr><th colspan="8">Parabak Test Suite</th></tr>
+<tr><td><a href="#t0">Register and Login Tests</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">68,676</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.parabank.qa.runners.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1761243204386</td><td rowspan="1">10791</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Parabak Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Register and Login Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.parabank.qa.runners.LoginRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1761791283645</td><td rowspan="1">24185</td></tr><tr class="failedodd"><td rowspan="1">com.parabank.qa.runners.RegisterRunner</td><td><a href="#m1">runScenario</a></td><td rowspan="1">1761791244101</td><td rowspan="1">39442</td></tr><tr><th colspan="4">Register and Login Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.parabank.qa.runners.LoginRunner</td><td><a href="#m2">runScenario</a></td><td rowspan="1">1761791307834</td><td rowspan="1">4372</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.parabank.qa.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Transfer funds between user&apos;s accounts&quot;</td><td>&quot;Transfer Funds&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Confirmation message should contain &apos;Transfer Complete!&apos; expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.parabank.qa.helpers.AssertionHelper.verifyTrue(AssertionHelper.java:18)
-	at com.parabank.qa.stepdefinitions.TransferFundsSteps.transfer_confirmation_message_should_be_displayed(TransferFundsSteps.java:100)
-	at ✽.a transfer confirmation message should be displayed(file:///C:/Users/thati/eclipse-workspace/JavaProgramming/Parabank-automation-project/src/test/resources/features/transfer-funds.feature:10)
+<h2>Register and Login Tests</h2><h3 id="m0">com.parabank.qa.runners.LoginRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Valid login with correct credentials&quot;</td><td>&quot;Login Functionality&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be &quot;ParaBank | Accounts Overview&quot;. Current title: &quot;ParaBank | Error&quot; (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\thati\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60387}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60387/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d4a625e454eaa40269a4c64acc3e7fc
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.parabank.qa.helpers.WaitHelper.waitForTitleToBe(WaitHelper.java:40)
+	at com.parabank.qa.stepdefinitions.LoginSteps.user_should_land_on(LoginSteps.java:50)
+	at ✽.user should land on &quot;Accounts Overview&quot;(file:///C:/Users/thati/git/parabank_local_repo/parabank/src/test/resources/features/login.feature:9)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.parabank.qa.runners.RegisterRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;User registers with valid details from data table&quot;</td><td>&quot;User Registration Functionality&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //p[contains(text(),&apos;Your account was created successfully&apos;)]&apos; (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.parabank.qa.helpers.WaitHelper.waitForElementVisible(WaitHelper.java:24)
+	at com.parabank.qa.pages.RegisterPage.isRegistrationSuccessful(RegisterPage.java:96)
+	at com.parabank.qa.stepdefinitions.RegisterSteps.user_should_see_confirmation_message(RegisterSteps.java:48)
+	at ✽.user should see a confirmation message &quot;Your account was created successfully. You are now logged in.&quot;(file:///C:/Users/thati/git/parabank_local_repo/parabank/src/test/resources/features/register.feature:19)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[contains(text(),&apos;Your account was created successfully&apos;)]&quot;}
+  (Session info: chrome=141.0.7390.123)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0fb382e4d2192b4d6e0862db669feb17, findElement {value=//p[contains(text(),&apos;Your account was created successfully&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\thati\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49398}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49398/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0fb382e4d2192b4d6e0862db669feb17
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at com.parabank.qa.helpers.WaitHelper.waitForElementVisible(WaitHelper.java:24)
+	at com.parabank.qa.pages.RegisterPage.isRegistrationSuccessful(RegisterPage.java:96)
+	at com.parabank.qa.stepdefinitions.RegisterSteps.user_should_see_confirmation_message(RegisterSteps.java:48)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.parabank.qa.runners.LoginRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Valid login with correct credentials&quot;</td><td>&quot;Login Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

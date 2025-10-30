@@ -1,62 +1,215 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-23T14:13:23 EDT" name="Default suite" finished-at="2025-10-23T14:13:35 EDT" duration-ms="11439">
+  <suite started-at="2025-10-29T22:27:23 EDT" name="Parabak Test Suite" finished-at="2025-10-29T22:28:32 EDT" duration-ms="68676">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.parabank.qa.runners.TestRunner@2aceadd4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.parabank.qa.runners.LoginRunner@1787bc24]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.parabank.qa.runners.RegisterRunner@4e07b95f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-10-23T14:13:23 EDT" name="Default test" finished-at="2025-10-23T14:13:35 EDT" duration-ms="11439">
-      <class name="com.parabank.qa.runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.parabank.qa.runners.TestRunner@2aceadd4]" started-at="2025-10-23T14:13:23 EDT" name="setUpClass" finished-at="2025-10-23T14:13:24 EDT" duration-ms="536" status="PASS">
+    <test started-at="2025-10-29T22:27:23 EDT" name="Register and Login Tests" finished-at="2025-10-29T22:28:32 EDT" duration-ms="68676">
+      <class name="com.parabank.qa.runners.LoginRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.parabank.qa.runners.LoginRunner@1787bc24]" started-at="2025-10-29T22:28:03 EDT" name="setUpClass" finished-at="2025-10-29T22:28:03 EDT" duration-ms="21" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4fa4f485]]>
+                <![CDATA[org.testng.TestRunner@c2cf597]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.parabank.qa.runners.TestRunner@2aceadd4]" started-at="2025-10-23T14:13:24 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-23T14:13:35 EDT" duration-ms="10791" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.parabank.qa.runners.LoginRunner@1787bc24]" started-at="2025-10-29T22:28:03 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-29T22:28:27 EDT" duration-ms="24185" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Transfer funds between user's accounts"]]>
+                <![CDATA["Valid login with correct credentials"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Transfer Funds"]]>
+                <![CDATA["Login Functionality"]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Confirmation message should contain 'Transfer Complete!' expected [true] but found [false]]]>
+              <![CDATA[Expected condition failed: waiting for title to be "ParaBank | Accounts Overview". Current title: "ParaBank | Error" (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\thati\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60387}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60387/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d4a625e454eaa40269a4c64acc3e7fc]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Confirmation message should contain 'Transfer Complete!' expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at com.parabank.qa.helpers.AssertionHelper.verifyTrue(AssertionHelper.java:18)
-at com.parabank.qa.stepdefinitions.TransferFundsSteps.transfer_confirmation_message_should_be_displayed(TransferFundsSteps.java:100)
-at ✽.a transfer confirmation message should be displayed(file:///C:/Users/thati/eclipse-workspace/JavaProgramming/Parabank-automation-project/src/test/resources/features/transfer-funds.feature:10)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be "ParaBank | Accounts Overview". Current title: "ParaBank | Error" (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\thati\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60387}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60387/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d4a625e454eaa40269a4c64acc3e7fc
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.parabank.qa.helpers.WaitHelper.waitForTitleToBe(WaitHelper.java:40)
+at com.parabank.qa.stepdefinitions.LoginSteps.user_should_land_on(LoginSteps.java:50)
+at ✽.user should land on "Accounts Overview"(file:///C:/Users/thati/git/parabank_local_repo/parabank/src/test/resources/features/login.feature:9)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.parabank.qa.runners.TestRunner@2aceadd4]" started-at="2025-10-23T14:13:35 EDT" name="tearDownClass" finished-at="2025-10-23T14:13:35 EDT" duration-ms="54" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.parabank.qa.runners.LoginRunner@1787bc24]" started-at="2025-10-29T22:28:27 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-29T22:28:32 EDT" duration-ms="4372" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Valid login with correct credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.parabank.qa.runners.LoginRunner@1787bc24]" started-at="2025-10-29T22:28:32 EDT" name="tearDownClass" finished-at="2025-10-29T22:28:32 EDT" duration-ms="22" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- com.parabank.qa.runners.TestRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.parabank.qa.runners.LoginRunner -->
+      <class name="com.parabank.qa.runners.RegisterRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.parabank.qa.runners.RegisterRunner@4e07b95f]" started-at="2025-10-29T22:27:23 EDT" name="setUpClass" finished-at="2025-10-29T22:27:24 EDT" duration-ms="505" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@c2cf597]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.parabank.qa.runners.RegisterRunner@4e07b95f]" started-at="2025-10-29T22:27:24 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-29T22:28:03 EDT" duration-ms="39442" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User registers with valid details from data table"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Registration Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //p[contains(text(),'Your account was created successfully')]' (tried for 20 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //p[contains(text(),'Your account was created successfully')]' (tried for 20 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.parabank.qa.helpers.WaitHelper.waitForElementVisible(WaitHelper.java:24)
+at com.parabank.qa.pages.RegisterPage.isRegistrationSuccessful(RegisterPage.java:96)
+at com.parabank.qa.stepdefinitions.RegisterSteps.user_should_see_confirmation_message(RegisterSteps.java:48)
+at ✽.user should see a confirmation message "Your account was created successfully. You are now logged in."(file:///C:/Users/thati/git/parabank_local_repo/parabank/src/test/resources/features/register.feature:19)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//p[contains(text(),'Your account was created successfully')]"}
+  (Session info: chrome=141.0.7390.123)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0fb382e4d2192b4d6e0862db669feb17, findElement {value=//p[contains(text(),'Your account was created successfully')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\thati\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49398}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49398/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0fb382e4d2192b4d6e0862db669feb17
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy29.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at com.parabank.qa.helpers.WaitHelper.waitForElementVisible(WaitHelper.java:24)
+at com.parabank.qa.pages.RegisterPage.isRegistrationSuccessful(RegisterPage.java:96)
+at com.parabank.qa.stepdefinitions.RegisterSteps.user_should_see_confirmation_message(RegisterSteps.java:48)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.parabank.qa.runners.RegisterRunner@4e07b95f]" started-at="2025-10-29T22:28:03 EDT" name="tearDownClass" finished-at="2025-10-29T22:28:03 EDT" duration-ms="53" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.parabank.qa.runners.RegisterRunner -->
+    </test> <!-- Register and Login Tests -->
+  </suite> <!-- Parabak Test Suite -->
 </testng-results>

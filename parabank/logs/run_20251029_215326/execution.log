@@ -1,0 +1,8 @@
+2025-10-29 21:53:27 [INFO] com.parabank.qa.listeners.ExtentReportListener: ✅ -----Test Started-----: runScenario
+2025-10-29 21:53:27 [INFO] com.parabank.qa.hooks.Hooks: 🔧 [Before] Starting driver setup for scenario
+2025-10-29 21:53:30 [INFO] com.parabank.qa.hooks.Hooks: 🌐 Navigating to URL: https://parabank.parasoft.com/
+2025-10-29 21:53:32 [INFO] com.parabank.qa.hooks.Hooks: 📝 ExtentTest started for scenario: User registers with valid details from data table
+2025-10-29 21:53:36 [INFO] com.parabank.qa.helpers.AssertionHelper: ✅ Assert TRUE: Registration successful
+2025-10-29 21:53:37 [INFO] com.parabank.qa.hooks.Hooks: 🧹 [After] Cleaning up driver after scenario
+2025-10-29 21:53:37 [INFO] com.parabank.qa.listeners.ExtentReportListener: ✅ ----Test Passed-----: runScenario
+2025-10-29 21:53:38 [INFO] com.parabank.qa.listeners.ExtentReportListener: 📄 Extent Report Flushed and Finalized.

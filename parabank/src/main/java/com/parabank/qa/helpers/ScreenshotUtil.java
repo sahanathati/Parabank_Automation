@@ -53,4 +53,33 @@ public class ScreenshotUtil {
             return null;
         }
     }
+    
+    public static String captureScreenshot(WebDriver driver, String testName) {
+        if (driver == null) {
+            log.error("WebDriver instance is null. Cannot take screenshot.");
+            return null;
+        }
+
+        try {
+            File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            String screenshotsDir = LogHelper.getCurrentRunPath() + "/screenshots";
+            File folder = new File(screenshotsDir);
+            if (!folder.exists()) {
+                folder.mkdirs();
+            }
+
+            String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+            String fileName = testName.replaceAll("[^a-zA-Z0-9-_]", "_") + "_" + timestamp + ".png";
+            String fullPath = screenshotsDir + "/" + fileName;
+
+            File dest = new File(fullPath);
+            FileUtils.copyFile(src, dest);
+            log.info("📸 Screenshot captured: " + fullPath);
+            return fullPath;
+
+        } catch (Exception e) {
+            log.error("❌ Failed to capture screenshot: " + e.getMessage());
+            return null;
+        }
+    }
 }

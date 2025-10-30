@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Oct 23 14:13:23 EDT 2025</td>
+<td>Started on:</td><td>Wed Oct 29 22:15:22 EDT 2025</td>
 </tr>
-<tr><td>Total time:</td><td>11 seconds (11439 ms)</td>
+<tr><td>Total time:</td><td>58 seconds (58213 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,24 +76,74 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.parabank.qa.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.parabank.qa.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Transfer funds between user's accounts", "Transfer Funds"</td>
-<td><div><pre>java.lang.AssertionError: Confirmation message should contain &apos;Transfer Complete!&apos; expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.parabank.qa.helpers.AssertionHelper.verifyTrue(AssertionHelper.java:18)
-	at com.parabank.qa.stepdefinitions.TransferFundsSteps.transfer_confirmation_message_should_be_displayed(TransferFundsSteps.java:100)
-	at ✽.a transfer confirmation message should be displayed(file:///C:/Users/thati/eclipse-workspace/JavaProgramming/Parabank-automation-project/src/test/resources/features/transfer-funds.feature:10)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1396801698", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1396801698'><pre>java.lang.AssertionError: Confirmation message should contain &apos;Transfer Complete!&apos; expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.parabank.qa.helpers.AssertionHelper.verifyTrue(AssertionHelper.java:18)
-	at com.parabank.qa.stepdefinitions.TransferFundsSteps.transfer_confirmation_message_should_be_displayed(TransferFundsSteps.java:100)
-	at ✽.a transfer confirmation message should be displayed(file:///C:/Users/thati/eclipse-workspace/JavaProgramming/Parabank-automation-project/src/test/resources/features/transfer-funds.feature:10)
+<td title='com.parabank.qa.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.parabank.qa.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid login with correct credentials", "Login Functionality"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be &quot;ParaBank | Accounts Overview&quot;. Current title: &quot;ParaBank | Error&quot; (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\thati\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54463}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54463/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 65b0f84b715c83a435cb95e0942e55b4
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.parabank.qa.helpers.WaitHelper.waitForTitleToBe(WaitHelper.java:40)
+	at com.parabank.qa.stepdefinitions.LoginSteps.user_should_land_on(LoginSteps.java:50)
+	at ✽.user should land on &quot;Accounts Overview&quot;(file:///C:/Users/thati/git/parabank_local_repo/parabank/src/test/resources/features/login.feature:9)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1014555985", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1014555985'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be &quot;ParaBank | Accounts Overview&quot;. Current title: &quot;ParaBank | Error&quot; (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\thati\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54463}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54463/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 65b0f84b715c83a435cb95e0942e55b4
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.parabank.qa.helpers.WaitHelper.waitForTitleToBe(WaitHelper.java:40)
+	at com.parabank.qa.stepdefinitions.LoginSteps.user_should_land_on(LoginSteps.java:50)
+	at ✽.user should land on &quot;Accounts Overview&quot;(file:///C:/Users/thati/git/parabank_local_repo/parabank/src/test/resources/features/login.feature:9)
 </pre></div></td>
-<td>10</td>
+<td>24</td>
+<td>com.parabank.qa.runners.TestRunner@2aceadd4</td></tr>
+<tr>
+<td title='com.parabank.qa.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.parabank.qa.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid login with correct credentials", "Login Functionality"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be &quot;ParaBank | Accounts Overview&quot;. Current title: &quot;ParaBank | Error&quot; (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\thati\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55862}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55862/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b96ea4d19f3104a8570640fac2cf2020
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.parabank.qa.helpers.WaitHelper.waitForTitleToBe(WaitHelper.java:40)
+	at com.parabank.qa.stepdefinitions.LoginSteps.user_should_land_on(LoginSteps.java:50)
+	at ✽.user should land on &quot;Accounts Overview&quot;(file:///C:/Users/thati/git/parabank_local_repo/parabank/src/test/resources/features/login.feature:9)
+</pre></div><a href='#' onClick='toggleBox("stack-trace168398198", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace168398198'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be &quot;ParaBank | Accounts Overview&quot;. Current title: &quot;ParaBank | Error&quot; (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\thati\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55862}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55862/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b96ea4d19f3104a8570640fac2cf2020
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.parabank.qa.helpers.WaitHelper.waitForTitleToBe(WaitHelper.java:40)
+	at com.parabank.qa.stepdefinitions.LoginSteps.user_should_land_on(LoginSteps.java:50)
+	at ✽.user should land on &quot;Accounts Overview&quot;(file:///C:/Users/thati/git/parabank_local_repo/parabank/src/test/resources/features/login.feature:9)
+</pre></div></td>
+<td>25</td>
+<td>com.parabank.qa.runners.TestRunner@2aceadd4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.parabank.qa.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.parabank.qa.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User registers with valid details from data table", "User Registration Functionality"</td>
+<td></td>
+<td>7</td>
 <td>com.parabank.qa.runners.TestRunner@2aceadd4</td></tr>
 </table><p>
 </body>

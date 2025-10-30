@@ -35,30 +35,41 @@ public class Hooks {
         ExtentTestManager.setTest(test);
         log.info("📝 ExtentTest started for scenario: " + scenario.getName());
     }
-
+    
     @After
     public void tearDown(Scenario scenario) {
         log.info("🧹 [After] Cleaning up driver after scenario");
-        
+
+        // ✅ Get driver BEFORE cleanup or unload
+        WebDriver driver = RuntimeManager.getDriver();
         ExtentTest test = ExtentTestManager.getTest();
+
         if (test != null) {
             if (scenario.isFailed()) {
-                String screenshotPath = ScreenshotUtil.captureScreenshot(scenario.getName());
+                log.error("❌ Scenario Failed: " + scenario.getName());
+                
+                // ✅ Pass driver directly to ScreenshotUtil
+                String screenshotPath = ScreenshotUtil.captureScreenshot(driver, scenario.getName());
+                
                 test.fail("Scenario Failed: " + scenario.getName());
                 if (screenshotPath != null) {
                     test.addScreenCaptureFromPath(screenshotPath);
                     test.fail("📸 Screenshot attached for failure.");
+                } else {
+                    test.fail("⚠️ Screenshot could not be captured.");
                 }
             } else {
                 test.pass("Scenario Passed: " + scenario.getName());
             }
         }
-        
-        
-        WebDriver driver = RuntimeManager.getDriver();
+
+        // ✅ Quit driver after screenshot
         if (driver != null) {
             driver.quit();
         }
+
+        // ✅ Remove ThreadLocal instance last
         RuntimeManager.unload();
     }
+
 }

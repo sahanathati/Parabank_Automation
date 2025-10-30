@@ -1,0 +1,6 @@
+com\parabank\qa\stepdefinitions\TransferFundsSteps.class
+com\parabank\qa\stepdefinitions\LoginSteps.class
+com\parabank\qa\stepdefinitions\AccountServicesSteps.class
+com\parabank\qa\stepdefinitions\RegisterSteps.class
+com\parabank\qa\hooks\Hooks.class
+com\parabank\qa\runners\TestRunner.class
